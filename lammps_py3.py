@@ -74,7 +74,6 @@ class xyz_trajectory:
 
     def __next__(self):
         if self.frame < self.n_frames-1:
-            a = self.frame
             self.frame += 1
             return self
         else:
@@ -156,7 +155,6 @@ class lammpstrj:
 
     def __next__(self):
         if self.frame < self.n_frames-1:
-            a = self.frame
             self.frame += 1
             return self
         else:
