@@ -342,7 +342,7 @@ def chunkIt(seq, num):
  
  
 #---------------------- PLOTS ------------------------------------------------  
-# Plots the atom unit density of atom cords in a pandasdataframe
+# Plots the atom unit density of atom cords in a pandas dataframe
 # except the atoms with the atom types in the given list ids = []
 # xlo, and xhi are the box and plot dimensions for pbc
 def contour_cell(atoms_data, ids, xlo, xhi):
@@ -392,7 +392,7 @@ def split_lines_of_timeframe(timeframe_array):
     return new_array
 
 #---------------------------------------------------
-# Function to read lammps trajectories - NOT RECOMMED
+# Function to read lammps trajectories - NOT RECOMMEND
 #
 # !!!! ATTENTION: VERY MEMORY DEMANDING !!!!
 #    !!!! USE lammpstrj class instead !!!!
