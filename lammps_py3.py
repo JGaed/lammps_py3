@@ -329,6 +329,7 @@ def smooth(x, lookahead=21, window='flat', pol_order=2):
 
     return y
  
+# Split a list in n lists with equal lengths
 def chunkIt(seq, num):
     avg = len(seq) / float(num)
     out = []
