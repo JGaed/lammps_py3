@@ -24,14 +24,14 @@ from scipy.ndimage.interpolation import shift
 # functions:
 #
 # <xyz_trajectory>.positions()   	-- xyz-atom coords of selected frame - numpy.array(3,N)
-# <xyz_trajectory>.atom_types()	-- atom-types of slected frame - numpy.array(1,N) - floats
+# <xyz_trajectory>.atom_types()	    -- atom-types of slected frame - numpy.array(1,N) - floats
 #
 # porperties:
 #
-# <xyz_trajectory>.frame		-- current selected frame - int
-# <xyz_trajectory>.n_frames		-- number of total frames in trajectory - int
+# <xyz_trajectory>.frame		    -- current selected frame - int
+# <xyz_trajectory>.n_frames		    -- number of total frames in trajectory - int
 # <xyz_trajectory>.atoms_per_frame	-- number of atoms per timestep - list(N)
-# <xyz_trajectory>.content		-- raw content of file as list(str)
+# <xyz_trajectory>.content		    -- raw content of file as list(str)
 #---------------------------------------------------
 
 class xyz_trajectory:
@@ -91,18 +91,18 @@ class xyz_trajectory:
 #
 # functions:
 #
-# <lammpstrj>.data() 		-- data of the selected frame - numpy.array(M,N); N = number of atoms; M = number of logged properties
-# <lammpstrj>.columns()  	-- columnnames of the logged properties - list(M)
-# <lammpstrj>.cell()		-- pbcs of the selected frame  - list([xlo, xhi], [ylo, yhi], [zlo, zhi])
-# <lammpstrj>.df_frame()	-- pandas DataFrame containg data+columns of selected timestep df(M,N)
+# <lammpstrj>.data() 		    -- data of the selected frame - numpy.array(M,N); N = number of atoms; M = number of logged properties
+# <lammpstrj>.columns()  	    -- columnnames of the logged properties - list(M)
+# <lammpstrj>.cell()		    -- pbcs of the selected frame  - list([xlo, xhi], [ylo, yhi], [zlo, zhi])
+# <lammpstrj>.df_frame()	    -- pandas DataFrame containg data+columns of selected timestep df(M,N)
 #
 # porperties:
 #
-# <lammpstrj>.frame		-- current selected frame - int
-# <lammpstrj>.n_frames		-- number of total frames in trajectory - int
+# <lammpstrj>.frame		        -- current selected frame - int
+# <lammpstrj>.n_frames		    -- number of total frames in trajectory - int
 # <lammpstrj>.atoms_per_frame	-- number of atoms per timestep - list()
-# <lammpstrj>.timesteps	-- timestep of the logged frames - list()
-# <lammpstrj>.content		-- raw content of file as list()
+# <lammpstrj>.timesteps	        -- timestep of the logged frames - list()
+# <lammpstrj>.content		    -- raw content of file as list()
 #---------------------------------------------------
 
 class lammpstrj:
