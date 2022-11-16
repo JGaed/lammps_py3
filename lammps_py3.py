@@ -43,6 +43,7 @@ class xyz_trajectory:
         self.atoms_per_frame, self.comments = self.__get_traj_properties()
         self.start_line_per_frame = numpy.hstack(([0], numpy.cumsum(numpy.array(self.atoms_per_frame) + 2)[:-1]))
         self.n_frames = len(self.atoms_per_frame)
+        self.iteration_started = False
         self.__iter__()
 
     def __file_content(self):
@@ -74,7 +75,9 @@ class xyz_trajectory:
 
     def __next__(self):
         if self.frame < self.n_frames-1:
-            self.frame += 1
+            if self.iteration_started:
+                self.frame += 1
+            self.iteration_started = True 
             return self
         else:
             raise StopIteration
@@ -113,6 +116,7 @@ class lammpstrj:
         self.timesteps, self.atoms_per_frame = self.__get_traj_properties()
         self.start_line_per_frame = numpy.hstack(([0], numpy.cumsum(numpy.array(self.atoms_per_frame) + 9)[:-1]))
         self.n_frames = len(self.atoms_per_frame)
+        self.iteration_started = False
         self.__iter__()
         self.__print()
 
@@ -155,7 +159,9 @@ class lammpstrj:
 
     def __next__(self):
         if self.frame < self.n_frames-1:
-            self.frame += 1
+            if self.iteration_started:
+                self.frame += 1
+            self.iteration_started = True 
             return self
         else:
             raise StopIteration
